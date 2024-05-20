@@ -57,9 +57,9 @@
             <form>
             <legend><span class="glyphicon glyphicon-globe"></span>Address</legend>
             <address>
-                <strong>National Institute of Hydology, Roorkee</strong><br>
-                Gate No. 3, <br>
-                Indian Institute of Technology, Roorkee 247667.<br>
+                <strong>Company Name</strong><br>
+                Address <br>
+               Address<br>
                 <abbr title="Phone">
                     P:</abbr>
                 (+91) 99999 99999
