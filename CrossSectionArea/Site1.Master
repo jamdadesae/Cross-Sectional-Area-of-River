@@ -1,0 +1,386 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="CrossSectionArea.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="Scripts/jquery.min.js"></script>
+  <script src="Scripts/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Include PapaParse from a CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+
+
+  <style>
+        /* Add styles for the vertical line and NIH text container */
+        .navbar-brand-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand::after {
+            content: "";
+            display: inline-block;
+            width: 1px; /* Width of the vertical line */
+            height: 110%; /* Height of the vertical line */
+            background-color: aliceblue; /* Color of the vertical line */
+            margin-left: 10px; /* Adjust the margin as needed */
+        }
+
+        
+        </style> 
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- As a link -->
+            <nav class="navbar bg-dark-blue" data-bs-theme="dark">
+              <div class="container-fluid">
+                <b class="navbar-brand" href="https://nihroorkee.gov.in/">National Portal</b>
+               
+                 
+                <div style="float: inline-end;"> 
+                <a href="https://www.facebook.com/bootsnipp" style="color:white"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com/bootsnipp"  style="color:white"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                </div>   
+
+
+
+                  <style>
+                      .navbar.bg-dark-blue {
+                          background-color: #0e2f6d;  /*Set the background color to dark blue */
+                      }
+                      b{
+                          color:aliceblue
+                      }
+                      
+                      
+                  </style>
+
+                  </div>
+  
+            </nav>
+                </div>
+            <section class="wrapper header-wrapper" role="region">
+                <div class="container header-container"> 
+                    <h1 class="logo">
+                        <a href="/">
+                            
+                            <strong>logo And Company Name</strong>
+                            </a>
+                    </h1>
+                    <!--
+                    <a href="javascript:void(0);" class="toggle-nav-bar">
+                        <span class="menu-icon"></span>
+                        <span class="menu-text">Menu</span>
+                    </a>
+                    -->
+                   
+                    <div class="header-right clearfix">
+                        <div class="right-content clearfix">
+                            <div class="">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <style>
+                    .logo {
+                            background: none;
+                            float: left;
+                            width: 80%;
+                            font-size: 160%;
+                            line-height: 105%;
+                            min-height: 103px;
+                            padding: 0;
+                            margin: 0;
+                            text-transform: inherit;
+                         }
+
+                    img {
+                        width: auto;
+                        height: auto;
+                        max-width: 100%;
+                        vertical-align: middle;
+                        border: 0;
+                        -ms-interpolation-mode: bicubic;
+                    }
+                                        
+                    .logo img {
+                        float: left;
+                        padding-right: 15px;
+                        width:fit-content;
+                     }
+
+                    .logo a {
+                        color: #2b59ad;
+                    }
+
+                    .logo a strong {
+                        font-weight: 600;
+                        display: block;
+                        font-size: 80%;
+                    }
+
+                    .logo a span {
+                        display: block;
+                        font-weight: 900;
+                        font-size: 110%;
+                        display: flex;
+                    }
+
+                    .logo a {
+                        display: block;
+                        text-align: left;
+                    }
+                    .bottom-logo{
+                        color: black;
+                        font-size: 50%;
+                        font-weight:100; /* Remove the bold style */
+                    }
+                    .header-right {
+                        float: right;
+                        
+                    }
+                    .right-content {
+                        float: right;
+                    }
+                     /* Style to center align the charts */
+                    .chart-container {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .chart {
+                        border: 1px solid #000; /* Border style */
+                        padding: 10px; /* Add padding for better appearance */
+                        display: inline-block;
+                        margin: 0 5px; /* Adjust the margin between charts */
+                    }
+
+                    footer{
+                        height:50px;
+                        width:100%;
+      
+                    }
+                </style>
+            </section>
+           
+<nav class="navbar navbar-default" style=" background-color:#0e2f6d;">
+<div class="container-fluid">
+<div class="navbar-header">
+    <a class="navbar-brand" style="color:white; padding-bottom:25px;">River Discharge and CrossSection Estimation</a>
+                    
+</div>
+<ul class="nav navbar-nav" >
+    <li ><a href="Home.aspx" style="color:white">Home</a></li>
+    <li ><a href="about.aspx" style="color:white">About</a></li>
+    <li ><a href="WebForm1.aspx" style="color:white">Calculate</a></li>
+    <li ><a href="contact.aspx" style="color:white">Contact Us</a></li>
+</ul>
+
+    <ul style="float: inline-end;">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin: 7px;">Login</button>
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal1"  style="margin: 7px;">Register</button>
+    </ul>
+</div>                            
+</nav>
+            
+<div class="container">
+  <!--<h2>Large Modal</h2>-->
+  <!-- Trigger the modal with a button -->
+ 
+
+  <!-- Modal LogIn-->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login</h4>
+        </div>
+        <div class="modal-body">
+        
+
+             <div class="container-fluid">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                       <asp:TextBox ID="TextBoxusername" runat="server" class="form-control" placeholder="Enter Mail"></asp:TextBox>
+                                
+                                                                   
+                                    </div>
+                                
+                         <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <asp:TextBox ID="TextBoxpass" runat="server" class="form-control" placeholder="Enter Password" TextMode="Password"></asp:TextBox>
+                                    </div>
+                                
+                                    </div>
+                                    
+
+                                
+                            <div class="input-group">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                        </label>
+                                      </div>
+                                    </div>
+
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                        
+                                        <asp:Button ID="Button2" runat="server" Text="login" class="btn btn-success" OnClick="ButtonLog_Click"/>
+
+                                        <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                                      <%--<a id="btn-login" href="#" class="btn btn-success">Login</a>--%>
+                                      
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account! 
+                                        <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                            Sign Up Here
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                        </div>                     
+                    </div>  
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            
+</div>
+
+<div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Registration</h4>
+        </div>
+        <div class="modal-body">
+        
+
+             <div class="container-fluid">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">User Registration</div>
+                       
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        
+                            
+                     
+                                    
+                           <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        
+                                <asp:TextBox ID="TextBoxName" runat="server" class="form-control" placeholder="Enter Name"></asp:TextBox>
+                                
+                                                                   
+                                    </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <asp:TextBox ID="TextBoxemail" runat="server" class="form-control" placeholder="Enter Email" TextMode="Email"></asp:TextBox>
+                                    </div>
+                                    
+                         <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <asp:TextBox ID="TextBoxpassword" runat="server" class="form-control" placeholder="Enter Password" TextMode="Password"></asp:TextBox>
+                                    </div>
+                                
+                           
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+
+                                        <asp:Button ID="ButtonReg" runat="server" Text="Register" class="btn btn-success" OnClick="ButtonReg_Click"/>
+
+                                        <asp:Label ID="Labelmsg" runat="server" Text=""></asp:Label>
+
+
+                                    </div>
+                                </div>
+
+
+                               <%-- <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account! 
+                                        <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                            Sign Up Here
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    --%>
+                        </div>                     
+                    </div>  
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            
+</div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        
+
+        <footer class="container-fluid text-center" style="background-color: #0e2f6d; padding:20px">
+  <q>Copy Right <a href="www.nihroorkee.gov.in" style="color:aliceblue">NIH Roorkee</a></q>
+            <style>
+            q{
+                color:aliceblue;
+            }
+        </style>
+</footer>
+
+        
+
+
+    </form>
+</body>
+</html>
