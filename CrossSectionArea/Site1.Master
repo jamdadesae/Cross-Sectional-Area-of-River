@@ -42,7 +42,7 @@
             <!-- As a link -->
             <nav class="navbar bg-dark-blue" data-bs-theme="dark">
               <div class="container-fluid">
-                <b class="navbar-brand" href="https://nihroorkee.gov.in/">National Portal</b>
+                <b class="navbar-brand" href="#">Portal</b>
                
                  
                 <div style="float: inline-end;"> 
