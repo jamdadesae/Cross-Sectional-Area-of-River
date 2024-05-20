@@ -54,6 +54,6 @@ By leveraging these visualization capabilities and interactive features provided
 Backend: Python
 Frontend: Visual Studio Code, ASP.NET
 
-##**Note**
+## **Note**
 Backend: Me
 Frontend: Me and team mates
