@@ -64,6 +64,6 @@
                 By using the trapezoidal method and taking precise field measurements, hydrologists and engineers can effectively estimate the cross-sectional area of a river, which is essential for various hydrological analyses and water management practices.
               
               <br /><br />
-            <a href="https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2021WR029825" target="_blank">Further details</a>
+            
             </p>
 </asp:Content>
